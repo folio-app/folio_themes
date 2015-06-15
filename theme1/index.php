@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading Effects for Grid Items | Demo 1</title>
-    <meta name="description" content="Loading Effects for Grid Items with CSS Animations" />
-    <meta name="keywords" content="css animation, loading effect, google plus, grid items, masonry" />
-    <meta name="author" content="Codrops" />
-    <link rel="shortcut icon" href="../favicon.ico">
+    <title>Mojo</title>
+    <meta name="description" content="Portfolio website" />
     <link rel="stylesheet" type="text/css" href="css/default.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link href='http://fonts.googleapis.com/css?family=Martel:200' rel='stylesheet' type='text/css'>
@@ -47,18 +44,18 @@
     </div>
 </nav>
 <div class="about-section fade-out remove">
-    <p>Hi, my name is Jane Doe. I am a Web Designer, Illustrator working in Vienna, Austria. My passion is to create beautiful, fun designs with a modern touch.
-    I am currently looking for jobs in Vienna, Austria. Shoot me and email or contact me through one of my social media links.</p>
+    <p>
+        Hi, my name is Jane Doe. I am a Web Designer, Illustrator working in Vienna, Austria. My passion is to create beautiful, fun designs with a modern touch.
+    I am currently looking for jobs in Vienna, Austria. Shoot me and email or contact me through one of my social media links.
+    </p>
 </div>
 <div class="project-container">
+    <!-- Hidden Project View -->
     <div class="project-view">
         <div class="close-window"><i class="fa fa-times"></i></div>
-        <div class="project-contents">
-
-        </div>
+        <div class="project-contents"></div>
     </div>
     <!-- Left Navigation -->
-
     <ul class="grid effect" id="grid">
         <li class="item">
             <a href="#/wineo">
@@ -103,7 +100,7 @@
                     </div>
                 </div>
             </a>
-        </li>s
+        </li>
 
         <li class="item">
             <a href="#/bubbles">
@@ -117,10 +114,55 @@
             </a>
         </li>
 
-        <li class="item"><a href=""><img src="images/6.jpg"><div class="show-overlay"></div></a></li>
-        <li class="item"><a href=""><img src="images/11.jpg"><div class="show-overlay"></div></a></li>
-        <li class="item"><a href=""><img src="images/7.jpg"><div class="show-overlay"></div></a></li>
-        <li class="item"><a href=""><img src="images/4.jpg"><div class="show-overlay"></div></a></li>
+        <li class="item">
+            <a href="#/vintage">
+                <img src="images/6.jpg">
+                <div class="show-overlay">
+                    <div class="details">
+                        <h3>The Vintage</h3>
+                        View
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li class="item">
+            <a href="#/zigzag">
+                <img src="images/11.jpg">
+                <div class="show-overlay">
+                    <div class="details">
+                        <h3>Zig Zag</h3>
+                        View
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li class="item">
+            <a href="#/cedar">
+                <img src="images/7.jpg">
+                <div class="show-overlay">
+                    <div class="details">
+                        <h3>Cedar</h3>
+                        View
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li class="item">
+            <a href="#/market">
+                <img src="images/4.jpg">
+                <div class="show-overlay">
+                    <div class="details">
+                        <h3>Market</h3>
+                        View
+                    </div>
+                </div>
+            </a>
+        </li>
+
+
         <li class="item"><a href=""><img src="images/10.jpg"><div class="show-overlay"></div></a></li>
         <li class="item"><a href=""><img src="images/5.jpg"><div class="show-overlay"></div></a></li>
         <li class="item"><a href=""><img src="images/8.jpg"><div class="show-overlay"></div></a></li>
@@ -240,7 +282,11 @@
         var height = window.innerHeight;
         $('.project-contents').css('height', height);
         $('.project-contents .project-image').imgLiquid();
-        $('.project-container').css('position', 'fixed');
+        if($(window).width() > 1025) {
+            $('.project-container').css('position', 'fixed');
+        } else {
+            $("html, body").animate({ scrollTop: 200 }, "slow");
+        }
         $('.project-view').addClass('project-show');
     }
 
@@ -251,6 +297,12 @@
     }
 
     $('.close-window').on('click', hideProject);
+
+    $( window ).resize(function() {
+        if($(window).width() < 1025) {
+            $('.project-container').css('position', 'relative');
+        }
+    });
 
 </script>
 </body>
