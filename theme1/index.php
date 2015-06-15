@@ -47,10 +47,10 @@
     </div>
 </nav>
 <div class="about-section fade-out remove">
-    <h3>Hellow</h3>
-    <p>lorem   djisaodjasidjasdioasj</p>
+    <p>Hi, my name is Jane Doe. I am a Web Designer, Illustrator working in Vienna, Austria. My passion is to create beautiful, fun designs with a modern touch.
+    I am currently looking for jobs in Vienna, Austria. Shoot me and email or contact me through one of my social media links.</p>
 </div>
-<div class="container float-right">
+<div class="project-container">
     <div class="project-view">
         <div class="close-window"><i class="fa fa-times"></i></div>
         <div class="project-contents">
@@ -83,7 +83,7 @@
             </a>
         </li>
         <li class="item">
-            <a href="">
+            <a href="#/theBlog">
                 <img src="images/9.jpg">
                 <div class="show-overlay">
                     <div class="details">
@@ -93,9 +93,30 @@
                 </div>
             </a>
         </li>
+        <li class="item">
+            <a href="#/vroom">
+                <img src="images/8.jpg">
+                <div class="show-overlay">
+                    <div class="details">
+                        <h3>The Blog</h3>
+                        View
+                    </div>
+                </div>
+            </a>
+        </li>s
 
-        <li class="item"><a href=""><img src="images/8.jpg"><div class="show-overlay"></div></a></li>
-        <li class="item"><a href=""><img src="images/3.jpg"><div class="show-overlay"></div></a></li>
+        <li class="item">
+            <a href="#/bubbles">
+                <img src="images/3.jpg">
+                <div class="show-overlay">
+                    <div class="details">
+                        <h3>The Blog</h3>
+                        View
+                    </div>
+                </div>
+            </a>
+        </li>
+
         <li class="item"><a href=""><img src="images/6.jpg"><div class="show-overlay"></div></a></li>
         <li class="item"><a href=""><img src="images/11.jpg"><div class="show-overlay"></div></a></li>
         <li class="item"><a href=""><img src="images/7.jpg"><div class="show-overlay"></div></a></li>
@@ -142,6 +163,7 @@
 <script src="js/classie.js"></script>
 <script src="js/AnimOnScroll.js"></script>
 <script src="js/carousel.min.js"></script>
+<script src="js/imgLiquid-min.js"></script>
 <script>
     new AnimOnScroll( document.getElementById( 'grid' ), {
         minDuration : 0.4,
@@ -155,7 +177,7 @@
     var projectItem = document.querySelectorAll('.item a');
     var projectView = document.querySelector('.project-view');
     var aboutSection = document.querySelector('.about-section');
-    var gridContainer = document.querySelector('.container');
+    var gridContainer = document.querySelector('.project-container');
 
 
     aboutUser.addEventListener('click', function(e) {
@@ -215,12 +237,16 @@
 
     function showProject(data) {
         $('.project-contents').html(data);
+        var height = window.innerHeight;
+        $('.project-contents').css('height', height);
+        $('.project-contents .project-image').imgLiquid();
+        $('.project-container').css('position', 'fixed');
         $('.project-view').addClass('project-show');
-        $('.carousel').carousel();
     }
 
     function hideProject() {
         window.location.href = "#";
+        $('.project-container').css('position', 'relative');
         $('.project-view').removeClass('project-show');
     }
 

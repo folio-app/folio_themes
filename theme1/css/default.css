@@ -95,6 +95,7 @@ nav {
     padding: 0 10px;
 }
 
+
 .media-icons a{
     border-radius: 100px;
     background: #333333;
@@ -122,9 +123,10 @@ nav {
 
 /* Main Content Styles */
 
-.container {
+.project-container {
     width: 85%;
     position: relative;
+    right: 0;
     -webkit-transform: translateX(0);
     -webkit-transition: all 0.5s;
     float: right;
@@ -154,9 +156,6 @@ nav {
     background: black;
 }
 
-.project-container {
-    position: relative;
-}
 
 .show-overlay {
     position: absolute;
@@ -198,6 +197,20 @@ nav {
 
 /* Media Queries */
 
+
+
+@media screen and (min-width: 1440px) {
+    .media-icons {
+        padding: 0 35px;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .media-icons {
+        padding: 0 50px;
+    }
+}
+
 @media screen and (max-width: 1025px) {
 
     nav {
@@ -212,8 +225,9 @@ nav {
         height: 90px;
     }
 
-    .container {
+    .project-container {
         float: none;
+        width: 83%;
         margin: 0 auto;
     }
 
@@ -339,9 +353,27 @@ nav {
     opacity: 1;
     position: relative;
     float: left;
-    margin: 50px;
+    margin: 190px 50px 50px;
     -webkit-transition: all 0.5s;
     pointer-events: none;
+}
+
+.about-section p {
+    font-family: 'Martel', serif;
+    max-width: 625px;
+}
+
+@media screen and (max-width: 1025px) {
+    .about-section {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 50px;
+        float: none;
+    }
+    
+    .about-section p {
+        max-width: 100%;
+    }
 }
 
 /* Project View */
@@ -366,11 +398,46 @@ nav {
 }
 
 .project-contents {
-    width: 80%;
-    height: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
+.project-link {
+    border-top: 1px solid #fff;
+    padding: 10px 0;
+}
+
+.project-link a {
+    color: #fff;
+}
+
+.project-details,
+.project-image {
+    display: inline-block;
+}
+
+.project-image {
+    width: 50%;
+    height: 100%;
+    border: 5px solid black;
+}
+
+.project-details {
+    width: 49%;
+    vertical-align: top;
+    padding-left: 40px;
+}
+
+
+.project-contents p {
+    font-family: 'Martel',serif;
+}
+
+.project-contents h2 {
+    font-family: 'Bebas', Helvetica, Arial;
+    font-size: 48px;
+    margin-bottom: 0;
+}
 .close-window {
     display: block;
     color: white;
@@ -379,6 +446,15 @@ nav {
     right: 30px;
     top: 20px;
     cursor: pointer;
+}
+
+.project-view-container {
+    position: relative;
+    top: 50%;
+    height: 80%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 /* Js actions */
