@@ -20,7 +20,7 @@
 
         <ul class="menu-items">
             <li>
-                <a href="" class="show-projects">Projects</a>
+                <a href="/about" class="show-projects">Projects</a>
             </li>
             <li>
                 <a href="" class="about-user">About</a>
@@ -291,7 +291,7 @@
     }
 
     function hideProject() {
-        window.location.href = "#";
+        window.history.pushState('', '', 'index.php');
         $('.project-container').css('position', 'relative');
         $('.project-view').removeClass('project-show');
     }
