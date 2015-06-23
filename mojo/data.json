@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "color": "default",
+  "portfolio": {
+      "title": "MOJO",
+      "logo": "",
+      "profile": "",
+      "details": "Hi, my name is Jane Doe. I am a Web Designer, Illustrator working in Vienna, Austria. My passion is to create beautiful, fun designs with a modern touch. I am currently looking for jobs in Vienna, Austria. Shoot me and email or contact me through one of my social media links."
+  },
+  "social": {
+    "facebook": "yes",
+    "twitter": "yes",
+    "behance": "yes",
+    "instagram": "",
+    "google+": "",
+    "linkedin": "yes"
+  },
+  "project": {
+    "1": {
+      "id": "1",
+      "title": "Wineo",
+      "link": "www.wineo.com",
+      "description": "Godard single-origin coffee twee before they sold out, distillery whatever dolore narwhal ex squid proident art party. Heirloom sint church-key, direct trade lumbersexual McSweeney's Odd Future readymade. Chambray accusamus art party, put a bird on it adipisicing bitters labore meh pork belly aute.<br/><br/> Helvetica cold-pressed dolor, 3 wolf moon heirloom vegan consequat eiusmod velit umami scenester retro hashtag anim Brooklyn. Delectus Thundercats vinyl, Blue Bottle organic street art you probably haven't heard of them reprehenderit. Cardigan ugh leggings YOLO elit mumblecore. Hashtag street art four dollar toast meditation plaid quis.",
+      "image": "1.jpg"
+    },
+    "2": {
+      "id": "2",
+      "title": "Alpha",
+      "link": "www.alpha.com",
+      "description": "Godard single-origin coffee twee before they sold out, distillery whatever dolore narwhal ex squid proident art party. Heirloom sint church-key, direct trade lumbersexual McSweeney's Odd Future readymade. Chambray accusamus art party, put a bird on it adipisicing bitters labore meh pork belly aute.<br/><br/> Helvetica cold-pressed dolor, 3 wolf moon heirloom vegan consequat eiusmod velit umami scenester retro hashtag anim Brooklyn. Delectus Thundercats vinyl, Blue Bottle organic street art you probably haven't heard of them reprehenderit. Cardigan ugh leggings YOLO elit mumblecore. Hashtag street art four dollar toast meditation plaid quis.",
+      "image": "2.jpg"
+    },
+    "3": {
+      "id": "3",
+      "title": "TheBlog",
+      "link": "www.theBlog.com",
+      "description": "Godard single-origin coffee twee before they sold out, distillery whatever dolore narwhal ex squid proident art party. Heirloom sint church-key, direct trade lumbersexual McSweeney's Odd Future readymade. Chambray accusamus art party, put a bird on it adipisicing bitters labore meh pork belly aute.<br/><br/> Helvetica cold-pressed dolor, 3 wolf moon heirloom vegan consequat eiusmod velit umami scenester retro hashtag anim Brooklyn. Delectus Thundercats vinyl, Blue Bottle organic street art you probably haven't heard of them reprehenderit. Cardigan ugh leggings YOLO elit mumblecore. Hashtag street art four dollar toast meditation plaid quis.",
+      "image": "9.jpg"
+    },
+    "4": {
+      "id": "4",
+      "title": "Vroom",
+      "link": "www.vroom.com",
+      "description": "Godard single-origin coffee twee before they sold out, distillery whatever dolore narwhal ex squid proident art party. Heirloom sint church-key, direct trade lumbersexual McSweeney's Odd Future readymade. Chambray accusamus art party, put a bird on it adipisicing bitters labore meh pork belly aute.<br/><br/> Helvetica cold-pressed dolor, 3 wolf moon heirloom vegan consequat eiusmod velit umami scenester retro hashtag anim Brooklyn. Delectus Thundercats vinyl, Blue Bottle organic street art you probably haven't heard of them reprehenderit. Cardigan ugh leggings YOLO elit mumblecore. Hashtag street art four dollar toast meditation plaid quis.",
+      "image": "8.jpg"
+    },
+    "5": {
+      "id": "5",
+      "title": "Bubbles",
+      "link": "www.bubbles.com",
+      "description": "Godard single-origin coffee twee before they sold out, distillery whatever dolore narwhal ex squid proident art party. Heirloom sint church-key, direct trade lumbersexual McSweeney's Odd Future readymade. Chambray accusamus art party, put a bird on it adipisicing bitters labore meh pork belly aute.<br/><br/> Helvetica cold-pressed dolor, 3 wolf moon heirloom vegan consequat eiusmod velit umami scenester retro hashtag anim Brooklyn. Delectus Thundercats vinyl, Blue Bottle organic street art you probably haven't heard of them reprehenderit. Cardigan ugh leggings YOLO elit mumblecore. Hashtag street art four dollar toast meditation plaid quis.",
+      "image": "3.jpg"
+    },
+    "6": {
+      "id": "6",
+      "title": "Vintage",
+      "link": "www.vintage.com",
+      "description": "Godard single-origin coffee twee before they sold out, distillery whatever dolore narwhal ex squid proident art party. Heirloom sint church-key, direct trade lumbersexual McSweeney's Odd Future readymade. Chambray accusamus art party, put a bird on it adipisicing bitters labore meh pork belly aute.<br/><br/> Helvetica cold-pressed dolor, 3 wolf moon heirloom vegan consequat eiusmod velit umami scenester retro hashtag anim Brooklyn. Delectus Thundercats vinyl, Blue Bottle organic street art you probably haven't heard of them reprehenderit. Cardigan ugh leggings YOLO elit mumblecore. Hashtag street art four dollar toast meditation plaid quis.",
+      "image": "6.jpg"
+    },
+    "7": {
+      "id": "7",
+      "title": "Zigzag",
+      "link": "www.zigzag.com",
+      "description": "Godard single-origin coffee twee before they sold out, distillery whatever dolore narwhal ex squid proident art party. Heirloom sint church-key, direct trade lumbersexual McSweeney's Odd Future readymade. Chambray accusamus art party, put a bird on it adipisicing bitters labore meh pork belly aute.<br/><br/> Helvetica cold-pressed dolor, 3 wolf moon heirloom vegan consequat eiusmod velit umami scenester retro hashtag anim Brooklyn. Delectus Thundercats vinyl, Blue Bottle organic street art you probably haven't heard of them reprehenderit. Cardigan ugh leggings YOLO elit mumblecore. Hashtag street art four dollar toast meditation plaid quis.",
+      "image": "11.jpg"
+    },
+    "8": {
+      "id": "8",
+      "title": "Cedar",
+      "link": "www.cedar.com",
+      "description": "Godard single-origin coffee twee before they sold out, distillery whatever dolore narwhal ex squid proident art party. Heirloom sint church-key, direct trade lumbersexual McSweeney's Odd Future readymade. Chambray accusamus art party, put a bird on it adipisicing bitters labore meh pork belly aute.<br/><br/> Helvetica cold-pressed dolor, 3 wolf moon heirloom vegan consequat eiusmod velit umami scenester retro hashtag anim Brooklyn. Delectus Thundercats vinyl, Blue Bottle organic street art you probably haven't heard of them reprehenderit. Cardigan ugh leggings YOLO elit mumblecore. Hashtag street art four dollar toast meditation plaid quis.",
+      "image": "7.jpg"
+    },
+    "9": {
+      "id": "9",
+      "title": "Market",
+      "link": "www.market.com",
+      "description": "Godard single-origin coffee twee before they sold out, distillery whatever dolore narwhal ex squid proident art party. Heirloom sint church-key, direct trade lumbersexual McSweeney's Odd Future readymade. Chambray accusamus art party, put a bird on it adipisicing bitters labore meh pork belly aute.<br/><br/> Helvetica cold-pressed dolor, 3 wolf moon heirloom vegan consequat eiusmod velit umami scenester retro hashtag anim Brooklyn. Delectus Thundercats vinyl, Blue Bottle organic street art you probably haven't heard of them reprehenderit. Cardigan ugh leggings YOLO elit mumblecore. Hashtag street art four dollar toast meditation plaid quis.",
+      "image": "4.jpg"
+    }
+  }
+}
