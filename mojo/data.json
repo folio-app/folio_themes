@@ -1,19 +1,83 @@
 {
+  "template": "Mojo",
   "version": "1.0",
   "color": "default",
-  "portfolio": {
-      "title": "MOJO",
-      "logo": "",
-      "profile": "",
-      "details": "Hi, my name is Jane Doe. I am a Web Designer, Illustrator working in Vienna, Austria. My passion is to create beautiful, fun designs with a modern touch. I am currently looking for jobs in Vienna, Austria. Shoot me and email or contact me through one of my social media links."
+  "my-portfolio": {
+    "text-input": [
+      {
+        "name": "profile-title",
+        "label": "Your Portfolio Title",
+        "description": "What should your portfolio be called? Your name perhaps or do you use an alias?",
+        "placeholder": "My Awesome Portfolio",
+        "value": "Mojo"
+      }
+    ],
+    "text-editor": [
+      {
+        "name": "details",
+        "label": "details",
+        "description": "A little about yourself",
+        "placeholder": "Hi my name is..",
+        "value": "Hi, my name is Jane Doe. I am a Web Designer, Illustrator working in Vienna, Austria. My passion is to create beautiful, fun designs with a modern touch. I am currently looking for jobs in Vienna, Austria. Shoot me and email or contact me through one of my social media links."
+      }
+    ],
+    "image-input": [
+      {
+        "name": "profile-picture",
+        "label": "Logo(optional)",
+        "description": "Do you want to display your logo as the Title instead of the title above?",
+        "value": ""
+      }
+    ],
+    "color-select": [
+      {
+        "default": "yes",
+        "white": "no"
+      }
+    ],
+    "select-input-double": [
+      {
+        "social": {
+          "facebook": "yes",
+          "twitter": "yes",
+          "behance": "yes",
+          "instagram": "",
+          "google+": "",
+          "linkedin": "yes"
+        }
+      }
+    ]
   },
-  "social": {
-    "facebook": "yes",
-    "twitter": "yes",
-    "behance": "yes",
-    "instagram": "",
-    "google+": "",
-    "linkedin": "yes"
+  "project-template": {
+    "text-input": [
+      {
+        "name": "project-title",
+        "label": "Project Title",
+        "description": "Your project title",
+        "placeholder": "My awesome project"
+      },
+      {
+        "name": "link",
+        "label": "Link Your Project",
+        "description": "Want to link to your project? Add the url below",
+        "placeholder": "www.awesome.com"
+      }
+    ],
+    "text-editor": [
+      {
+        "name": "description",
+        "label": "Project Description",
+        "description": "What is your project? When, where, why and how!",
+        "placeholder": "My project is.."
+      }
+    ],
+    "image-input": [
+      {
+        "name": "cover",
+        "label": "cover-image",
+        "description": "This will be the focus point for the project."
+      }
+    ]
   },
   "project": {
     "1": {
