@@ -1,5 +1,6 @@
 {
   "template": "Mojo",
+  "template-id": "1",
   "version": "1.0",
   "color": "default",
   "my-portfolio": {
@@ -12,6 +13,14 @@
         "value": "Mojo"
       }
     ],
+    "image-input": [
+      {
+        "name": "profile-picture",
+        "label": "Logo(optional)",
+        "description": "Do you want to display your logo as the Title instead of the title above?",
+        "value": ""
+      }
+    ],
     "text-editor": [
       {
         "name": "details",
@@ -19,14 +28,6 @@
         "description": "A little about yourself",
         "placeholder": "Hi my name is..",
         "value": "Hi, my name is Jane Doe. I am a Web Designer, Illustrator working in Vienna, Austria. My passion is to create beautiful, fun designs with a modern touch. I am currently looking for jobs in Vienna, Austria. Shoot me and email or contact me through one of my social media links."
-      }
-    ],
-    "image-input": [
-      {
-        "name": "profile-picture",
-        "label": "Logo(optional)",
-        "description": "Do you want to display your logo as the Title instead of the title above?",
-        "value": ""
       }
     ],
     "color-select": [
@@ -37,14 +38,7 @@
     ],
     "select-input-double": [
       {
-        "social": {
-          "facebook": "yes",
-          "twitter": "yes",
-          "behance": "yes",
-          "instagram": "",
-          "google+": "",
-          "linkedin": "yes"
-        }
+        "Facebook": "www.faceboook.com/test"
       }
     ]
   },
