@@ -460,7 +460,7 @@
             var id = getProjectId();
             if($projectData == "") {
                 $.ajax({
-                    url: 'data.json',
+                    url: 'data/data.json',
                     type: 'GET',
                     success: function (data, status) {
                         if (status === "success") {
@@ -483,7 +483,7 @@
         }
 
         function showProject(data, id) {
-            var $data = JSON.parse(data);
+            var $data = data;
             jQuery.each($data.project, function(i, val) {
                 if(i == id) {
                     $('.project-image img').attr('src', './images/'+val.image);
