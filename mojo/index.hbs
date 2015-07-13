@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="css/stylesheet.min.css" />
     <link href='http://fonts.googleapis.com/css?family=Martel:200' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <script src="js/modernizr.custom.js"></script>
 </head>
 <body>
 <nav role="navigation">
@@ -137,7 +136,7 @@
             var id = getProjectId();
             if($projectData == "") {
                 $.ajax({
-                    url: 'data.json',
+                    url: 'data/data.json',
                     type: 'GET',
                     success: function (data, status) {
                         if (status === "success") {
@@ -160,7 +159,7 @@
         }
 
         function showProject(data, id) {
-            var $data = JSON.parse(data);
+            var $data = data;
             jQuery.each($data.project, function(i, val) {
                 if(i == id) {
                     $('.project-image img').attr('src', './images/'+val.image);
