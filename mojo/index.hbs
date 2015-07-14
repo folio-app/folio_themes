@@ -52,7 +52,7 @@
                 </div>
                 <div class="project-details">
                     <h2></h2>
-                    <P></P>
+                    <div class="project-paragraph"></div>
                     <div class="project-link">
                         <a href=""></a>
                     </div>
@@ -164,7 +164,7 @@
                 if(i == id) {
                     $('.project-image img').attr('src', './images/'+val.image);
                     $('.project-details h2').html(val.title);
-                    $('.project-details p').html(val.description);
+                    $('.project-paragraph').html(val.description);
                     $('.project-link a').attr('href', val.link);
                     $('.project-link a').html(val.link);
                 }
