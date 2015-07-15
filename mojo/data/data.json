@@ -10,14 +10,16 @@
       "description": "What should your portfolio be called? Your name perhaps or do you use an alias?",
       "placeholder": "My Awesome Portfolio",
       "type": "text-input",
-      "value": "Mojo"
+      "value": "Mojo",
+      "required": "true"
     },
     {
       "name": "profile-picture",
       "label": "Logo(optional)",
       "description": "Do you want to display your logo as the Title instead of the title above?",
       "type": "image-input",
-      "value": ""
+      "value": "",
+      "required": "false"
     },
     {
       "name": "details",
@@ -25,11 +27,13 @@
       "description": "A little about yourself",
       "placeholder": "Hi my name is..",
       "type": "text-editor",
-      "value": "A little about yourself.."
+      "value": "A little about yourself..",
+      "required": "true"
     },
     {
       "name": "color-select",
       "type": "color-select",
+      "required": "true",
       "colors": {
         "default": "yes",
         "white": "no"
@@ -38,6 +42,7 @@
     {
       "name": "select-input-double",
       "type": "select-input-double",
+      "required": "false",
       "options": [
         {
           "facebook": "www.facebook.com",
@@ -55,7 +60,8 @@
       "description": "Your project title",
       "placeholder": "My awesome project",
       "type": "text-input",
-      "value": ""
+      "value": "",
+      "required": "true"
     },
     {
       "name": "link",
@@ -63,7 +69,8 @@
       "description": "Want to link to your project? Add the url below",
       "placeholder": "www.awesome.com",
       "type": "text-input",
-      "value": ""
+      "value": "",
+      "required": "false"
     },
     {
       "name": "description",
@@ -71,13 +78,15 @@
       "description": "What is your project? When, where, why and how!",
       "placeholder": "My project is..",
       "type": "text-editor",
-      "value": ""
+      "value": "",
+      "required": "true"
     },
     {
       "name": "cover",
       "label": "cover-image",
       "description": "This will be the focus point for the project.",
-      "type": "image-input"
+      "type": "image-input",
+      "required": "true"
     }
   ],
   "project": {
