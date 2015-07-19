@@ -27,6 +27,10 @@ a {
 	text-decoration: none;
 }
 
+p {
+    font-family: 'Martel', serif;
+}
+
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -224,6 +228,7 @@ nav {
 .project-view {
     position: absolute;
     width: 100%;
+    height: 100%;
     background: rgba(0,0,0,0.8);
     z-index: 1;
     top: 0;
@@ -263,7 +268,7 @@ nav {
 .project-image {
     width: 50%;
     height: 100%;
-    border: 5px solid black;
+    border: 1px solid #333;
 }
 
 .project-details {

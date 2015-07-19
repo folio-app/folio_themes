@@ -140,7 +140,7 @@
                     type: 'GET',
                     success: function (data, status) {
                         if (status === "success") {
-                            $projectData = data;
+                            $projectData = JSON.parse(data);
                             showProject($projectData, id);
                         }
                     }
@@ -182,7 +182,7 @@
         }
 
         function hideProject() {
-            window.history.pushState('', '', 'index.php');
+            window.history.pushState('', '', 'index.html');
             $('.project-container').css('position', 'relative');
             $('.project-view').removeClass('project-show');
         }

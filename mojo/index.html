@@ -464,7 +464,7 @@
                     type: 'GET',
                     success: function (data, status) {
                         if (status === "success") {
-                            $projectData = data;
+                            $projectData = JSON.parse(data);
                             showProject($projectData, id);
                         }
                     }
@@ -486,6 +486,7 @@
             var $data = data;
             jQuery.each($data.project, function(i, val) {
                 if(i == id) {
+                    console.log(val['cover-image']);
                     $('.project-image img').attr('src', './images/'+val['cover-image']);
                     $('.project-details h2').html(val.title);
                     $('.project-details p').html(val.description);
@@ -506,7 +507,7 @@
         }
 
         function hideProject() {
-            window.history.pushState('', '', 'index.php');
+            window.history.pushState('', '', 'index.html');
             $('.project-container').css('position', 'relative');
             $('.project-view').removeClass('project-show');
         }
