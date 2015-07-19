@@ -464,7 +464,7 @@
                     type: 'GET',
                     success: function (data, status) {
                         if (status === "success") {
-                            $projectData = JSON.parse(data);
+                            $projectData = data;
                             showProject($projectData, id);
                         }
                     }
