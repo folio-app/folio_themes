@@ -486,7 +486,7 @@
             var $data = data;
             jQuery.each($data.project, function(i, val) {
                 if(i == id) {
-                    $('.project-image img').attr('src', './images/'+val.cover-image);
+                    $('.project-image img').attr('src', './images/'+val['cover-image']);
                     $('.project-details h2').html(val.title);
                     $('.project-details p').html(val.description);
                     $('.project-link a').attr('href', val.link);
