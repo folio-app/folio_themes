@@ -129,6 +129,7 @@ nav {
 
 .project-container {
     width: 85%;
+    height: 100%;
     position: relative;
     right: 0;
     -webkit-transform: translateX(0);

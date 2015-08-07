@@ -38,7 +38,7 @@
 </nav>
 <div class="about-section fade-out remove">
 
-    {{ my-portfolio.2.value }}
+    {{{ my-portfolio.2.value }}}
 
 </div>
 <div class="project-container">
@@ -164,7 +164,7 @@
                 if(i == id) {
                     $('.project-image img').attr('src', './images/'+val['cover-image']);
                     $('.project-details h2').html(val.title);
-                    $('.project-paragraph').html(val.details);
+                    $('.project-paragraph').html(val.description);
                     $('.project-link a').attr('href', val.link);
                     $('.project-link a').html(val.link);
                 }
