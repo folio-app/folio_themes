@@ -44,10 +44,10 @@
       "required": "false",
       "options": [
         {
-          "facebook": "www.facebook.com",
-          "linkedin": "www.linkedin.com",
-          "twitter": "www.twitter.com",
-          "behance": "www.behance.com"
+          "facebook": "https://www.facebook.com",
+          "linkedin": "https://www.linkedin.com",
+          "twitter": "https://www.twitter.com",
+          "behance": "https://www.behance.com"
         }
       ]
     }
@@ -66,8 +66,8 @@
       "name": "link",
       "label": "Link Your Project",
       "description": "Want to link to your project? Add the url below",
-      "placeholder": "www.awesome.com",
-      "type": "text-input",
+      "placeholder": "https://www.awesome.com",
+      "type": "url-input",
       "value": "",
       "required": "true"
     },
