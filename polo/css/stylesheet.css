@@ -1,3 +1,5 @@
+
+
 .cf:before,
 .cf:after {
     content: " "; /* 1 */
@@ -8,13 +10,6 @@
     clear: both;
 }
 
-html,
-body {
-    font-family: 'Hind', Helvetica, Arial, Sans-serif;
-    font-size: 16px;
-    color: #464646;
-}
-
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
@@ -23,8 +18,22 @@ body {
     *zoom: 1;
 }
 
+html,
+body {
+    font-family: 'Hind', Helvetica, Arial, Sans-serif;
+    font-size: 16px;
+    color: #464646;
+    width: 100%;
+    height: 100%;
+}
+
 h2 {
     margin: 12px 0;
+}
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 0;
 }
 
 li {
@@ -35,6 +44,17 @@ ul {
     padding: 0;
     margin: 0;
 }
+
+a {
+    color: #505050;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
 
 .container {
     width: 95%;
@@ -240,19 +260,24 @@ nav h1 {
 }
 
 .overlay-view .container {
+    -webkit-box-sizing: boder-box;
+    -moz-box-sizing: boder-box
+    -ie-box-sizing: boder-box
+    box-sizing: border-box;
     position: absolute;
-    width: 40%;
+    width: 32%;
     height: 100%;
     right: 0;
     top: 0;
     bottom: 0;
+    margin: 4%;
 }
 
 .close {
     color: #fff;
     position: absolute;
-    right: 16px;
-    top: 15px;
+    right: 20px;
+    top: 10px;
     font-size: 30px;
     cursor: pointer;
      -webkit-transition: color 0.3s ease;
@@ -274,6 +299,10 @@ nav h1 {
 .position-block {
     position: fixed;
     z-index: 99;
+    -webkit-box-sizing: boder-box;
+    -moz-box-sizing: boder-box
+    -ie-box-sizing: boder-box
+    box-sizing: border-box;
 }
 
 
@@ -335,4 +364,60 @@ nav h1 {
     }
 }
 
+.project-description {
+    color: #9A9A9A;
+}
 
+.overlay-view h3 {
+    color: #E0DEDE;
+}
+
+.project-link {
+    margin-top: 25px;
+    border-top: 1px solid #2B2B2B;
+    padding-top: 10px;
+}
+
+.fix-pos {
+    overflow: hidden;
+}
+
+
+
+/*
+*
+* Animation Effects
+*
+*/
+
+.projects li {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -ie-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+
+}
+
+.projects li.shown {
+    opacity: 1;
+}
+
+
+.projects li.animate {
+
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    -webkit-animation: moveUp 0.65s ease forwards;
+    animation: moveUp 0.65s ease forwards;
+}
+
+@-webkit-keyframes moveUp {
+    0% { }
+    100% { -webkit-transform: translateY(0); opacity: 1; }
+}
+
+@keyframes moveUp {
+    0% { }
+    100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+}

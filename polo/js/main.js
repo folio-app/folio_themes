@@ -1,4 +1,25 @@
+
+
+
+
+
+
 $(document).ready(function() {
+
+  /*
+  *
+  * Init scroll animation
+  *
+  */
+$(window).load(function() {
+
+  new AnimOnScroll( document.getElementById( 'grid' ), {
+
+  });
+});
+
+
+
 
   var $aboutSection = $('.about'),
       $caret = $('.left-nav i'),
@@ -18,7 +39,7 @@ $(document).ready(function() {
   * Set grid element events
   *
   */
-  $('li').on('click', function(e) {
+  $('.grid-item').on('click', function(e) {
     e.preventDefault();
     $aboutSection.slideUp();
     $aboutButton.removeClass('open');
@@ -29,7 +50,6 @@ $(document).ready(function() {
   $('.close').on('click', function() {
     project.hide();
   });
-
 
 
 
@@ -54,11 +74,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
   /*
   *
   * Grid to project view
@@ -67,37 +82,46 @@ $(document).ready(function() {
   */
   var project = {
     show: function(el) {
+      $('body').addClass('fix-pos');
 
-      var position = $(el).offset();
-      var width = $(el).width();
-      var height = $(el).height();
-      var id = $(el).data('id');
+      var $el      = $(el),
+        position   = $el.offset(),
+        width      = $el.width(),
+        height     = $el.height(),
+        id         = $el.data('id');
 
-      $clone = $(el).clone(true);
-      $clone.css(position);
+
+      $clone = $el.clone();
+      $clone.css('left', position.left);
+      $clone.css('right', position.right);
+      $clone.css('bottom', position.bottom);
+      $clone.css('top', position.top - $(window).scrollTop());
       $clone.css('width', width);
       $clone.css('height', height);
       $clone.addClass('position-block');
       $clone.removeClass('grid-item');
-      $(el).append($clone);
+      $el.after($clone);
 
 
       var $positionBlock = $('.position-block');
+
+      $positionBlock.find('.overlay').remove();
       $positionBlock.attr('data-target', id);
       $positionBlock.animate({
         width: '60%',
-        height: '100%',
+        height: '97%',
         left: '0',
         right: '0',
         bottom: '0',
-        top: '0'
+        top: '0',
+        margin: '1%'
       }, 400);
 
 
       $('.overlay-view').removeClass('hidden');
+      $positionBlock.on('click', function(e) { e.preventDefault();});
     },
     hide: function() {
-
       var $overlay = $('.overlay-view');
       var $positionBlock = $('.position-block');
       var targetId = $positionBlock.data('target');
@@ -110,15 +134,18 @@ $(document).ready(function() {
       $positionBlock.animate({
         width: elWidth,
         height: elHeight,
-        top: position.top,
+        top: position.top - $(window).scrollTop(),
         left: position.left,
         right: position.right,
-        bottom: position.bottom
+        bottom: position.bottom,
+        margin: '0'
       }, 400);
 
       setTimeout(function() {
         $positionBlock.remove();
-      }, 500);
+        $('body').removeClass('fix-pos');
+      }, 1000);
+
 
       $('.overlay-view').addClass('hidden');
 
