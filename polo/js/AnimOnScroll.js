@@ -104,10 +104,6 @@
                             self._checkTotalRendered();
                             classie.add( el, 'shown' );
                         }
-
-                        if (i === self.items.length - 1) {
-                            console.log('done')
-                        }
                     } );
 
                     // animate on scroll the items inside the viewport

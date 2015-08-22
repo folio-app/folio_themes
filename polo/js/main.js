@@ -186,7 +186,7 @@ $(document).ready(function() {
             $projectTitle = $projectDetails.find('h3');
             $projectDescription = $projectDetails.find('.project-description');
             $projectLink = $('.project-link a');
-            $
+
 
         $projectTitle.html($project.title);
         $projectDescription.html($project.description);
@@ -206,9 +206,9 @@ $(document).ready(function() {
   * Send ajax request if # is in url
   *
   */
-  // addEventListener('hashchange', function () {
-  //     projectData.get();
-  // });
+  addEventListener('hashchange', function () {
+      projectData.get();
+  });
 
 
 /*
