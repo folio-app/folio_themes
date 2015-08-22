@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ my-portfolio.0.value }}</title>
+    <meta name="Polo" content="{{}} Portfolio" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <link href='http://fonts.googleapis.com/css?family=Hind:300|Montserrat:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav role="nav">
+        <div class="container cf">
+            <div class="left-nav">About <i class="fa fa-caret-down"></i></i></div>
+            <h1>{{ my-portfolio.0.value }}</h1>
+            <ul class="right-nav">
+                {{#each my-portfolio.4.options }}
+                    {{#each this}}
+                        <li>
+                            <a href="{{this}}"><i class="fa fa-{{@key}}"></i></a>
+                        </li>
+                    {{/each}}
+                {{/each}}
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main">
+    <div class="overlay-view hidden">
+        <div class="close"><i class="fa fa-times"></i></div>
+        <div class="container project-details">
+            <h3></h3>
+            <div class="project-description"><p></p></div>
+            <div class="project-link"><a href=""></a></div>
+        </div>
+    </div>
+        <div class="container">
+
+            <div class="about">
+                <div class="container">
+                    <div class="about-image">
+                        <img src="images/{{ my-portfolio.2.value }}" alt="Profile picture" title="My profile picture">
+                    </div>
+                    <div class="about-text">
+                        <h2>
+                         {{ my-portfolio.3.value }}
+                        </h2>
+                        {{{ my-portfolio.4.value }}}
+                    </div>
+
+                </div>
+            </div>
+            <ul class="projects cf" id="grid">
+                {{#each project}}
+                <li class="grid-item" data-id="1">
+                    <a href="#/{{ this.id }}">
+                        <div class="project-container" id="meow">
+                            <img src="images/{{ this.cover-image }}" alt="{{this.cover-image}}" title="{{this.cover-image}}">
+                            <div class="overlay">
+                                <div>{{ this.title }}</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </main>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/classie.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/imgLiquid-min.js"></script>
+<script src="js/AnimOnScroll.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

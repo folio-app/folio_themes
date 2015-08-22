@@ -9,16 +9,33 @@
       "description": "What should your portfolio be called? Your name perhaps or do you use an alias?",
       "placeholder": "My Awesome Portfolio",
       "type": "text-input",
-      "value": "Mojo",
+      "value": "Marco Polo",
       "required": "true"
     },
     {
-      "name": "profile-picture",
-      "label": "Logo(optional)",
+      "name": "logo",
+      "label": "Logo (Optional)",
       "description": "Do you want to display your logo as the Title instead of the title above?",
       "type": "image-input",
       "value": "",
       "required": "false"
+    },
+    {
+      "name": "profile-picture",
+      "label": "About Page Image (Optional)",
+      "description": "Add an image of yourself to personalize your portfolio!",
+      "type": "image-input",
+      "value": "placeholder.jpg",
+      "required": "false"
+    },
+    {
+      "name": "details-title",
+      "label": "Details Title (Optional)",
+      "descritpion": "Include a title for your about description.",
+      "type": "text-input",
+      "value": "Hi my name is Jane and this is my portfolio.",
+      "required": "false"
+
     },
     {
       "name": "details",
@@ -26,7 +43,7 @@
       "description": "A little about yourself",
       "placeholder": "Hi my name is..",
       "type": "text-editor",
-      "value": "A little about yourself..",
+      "value": "I am a digital designer and part time developer. I studied at the Global School of Design in London and have traveled the world working at many interesting companies. My passion for design has allowed me to work on some pretty awesome projects. Please take a look at the projects below and feel free to email me at jane.doe@anon.com.<br> I am currently available for jobs.",
       "required": "true"
     },
     {

@@ -391,12 +391,24 @@ nav h1 {
 */
 
 .projects li {
-    opacity: 1;
+    opacity: 0;
     -webkit-transition: opacity 1s ease;
     -moz-transition: opacity 1s ease;
     -ie-transition: opacity 1s ease;
     transition: opacity 1s ease;
 
+}
+
+.project-details {
+    opacity: 0;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -ie-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+
+.project-details.show {
+    opacity: 1;
 }
 
 .projects li.shown {

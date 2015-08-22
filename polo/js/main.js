@@ -1,29 +1,20 @@
 
-
-
-
-
-
 $(document).ready(function() {
+
+
+
 
   /*
   *
-  * Init scroll animation
+  * Set variables
   *
   */
-$(window).load(function() {
-
-  new AnimOnScroll( document.getElementById( 'grid' ), {
-
-  });
-});
-
-
-
-
   var $aboutSection = $('.about'),
-      $caret = $('.left-nav i'),
-      $aboutButton = $('.left-nav');
+      $caret        = $('.left-nav i'),
+      $aboutButton  = $('.left-nav'),
+      $projectJson  = "";
+
+
 
   /*
   *
@@ -40,7 +31,6 @@ $(window).load(function() {
   *
   */
   $('.grid-item').on('click', function(e) {
-    e.preventDefault();
     $aboutSection.slideUp();
     $aboutButton.removeClass('open');
     $caret.attr('class','fa fa-caret-down');
@@ -120,16 +110,18 @@ $(window).load(function() {
 
       $('.overlay-view').removeClass('hidden');
       $positionBlock.on('click', function(e) { e.preventDefault();});
-    },
-    hide: function() {
-      var $overlay = $('.overlay-view');
-      var $positionBlock = $('.position-block');
-      var targetId = $positionBlock.data('target');
 
-      var $originalEl = $('[data-id="'+targetId+'"]');
-      var position = $originalEl.offset();
-      var elWidth = $originalEl.width();
-      var elHeight = $originalEl.height();
+    },
+
+    hide: function() {
+
+      var $overlay       = $('.overlay-view'),
+          $positionBlock = $('.position-block'),
+          targetId       = $positionBlock.data('target'),
+          $originalEl    = $('[data-id="'+targetId+'"]'),
+          position       = $originalEl.offset(),
+          elWidth        = $originalEl.width(),
+          elHeight       = $originalEl.height();
 
       $positionBlock.animate({
         width: elWidth,
@@ -149,10 +141,104 @@ $(window).load(function() {
 
       $('.overlay-view').addClass('hidden');
 
+      window.history.pushState('', '', 'index.html');
     }
   }
 
 
+
+  /*
+  *
+  * Show project functions
+  *
+  */
+  var projectData = {
+    get: function() {
+      var id = projectData.getId();
+      if($projectJson === "") {
+        $.ajax({
+            url: 'data/data.json',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data, status) {
+                if (status === "success") {
+                    $projectJson = data;
+                    projectData.insert($projectJson, id);
+                }
+            }
+        });
+      } else {
+        projectData.insert($projectJson, id);
+      }
+
+    },
+    getId: function() {
+        var hashPath   =  window.location.href;
+        hashPath       = hashPath.split('/');
+        var hashLength = hashPath.length - 1,
+            id         = hashPath[hashLength];
+        return id;
+    },
+    insert: function(data, id) {
+        var $data    = data,
+            $project = $data.project[id],
+            $projectDetails = $('.project-details');
+            $projectTitle = $projectDetails.find('h3');
+            $projectDescription = $projectDetails.find('.project-description');
+            $projectLink = $('.project-link a');
+            $
+
+        $projectTitle.html($project.title);
+        $projectDescription.html($project.description);
+        $projectLink.attr('href', $project.link);
+        $projectLink.html($project.link);
+
+        $projectDetails.addClass('show');
+
+    }
+
+  }
+
+
+
+  /*
+  *
+  * Send ajax request if # is in url
+  *
+  */
+  // addEventListener('hashchange', function () {
+  //     projectData.get();
+  // });
+
+
+/*
+  *
+  * Init scroll animation
+  *
+  */
+  $(window).load(function() {
+
+    new AnimOnScroll( document.getElementById( 'grid' ), {
+
+    });
+
+
+
+      /*
+    *
+    * Send ajax request if # is in url
+    * on pageload.
+    *
+    */
+      var path = window.location.href;
+      if(path.indexOf("#") >= 0) {
+          var id = projectData.getId(),
+              el = $('.grid-item[data-id="' + id + '"]');
+
+          project.show(el);
+          projectData.get();
+      }
+  });
 
 
 
