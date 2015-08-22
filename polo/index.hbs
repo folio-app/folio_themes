@@ -55,9 +55,9 @@
             </div>
             <ul class="projects cf" id="grid">
                 {{#each project}}
-                <li class="grid-item" data-id="1">
+                <li class="grid-item" data-id="{{this.id}}">
                     <a href="#/{{ this.id }}">
-                        <div class="project-container" id="meow">
+                        <div class="project-container">
                             <img src="images/{{ this.cover-image }}" alt="{{this.cover-image}}" title="{{this.cover-image}}">
                             <div class="overlay">
                                 <div>{{ this.title }}</div>

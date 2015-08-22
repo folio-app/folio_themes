@@ -31,7 +31,7 @@ $(document).ready(function() {
   *
   */
   $('.grid-item').on('click', function(e) {
-    $aboutSection.slideUp();
+    $aboutSection.slideUp().removeClass('show');
     $aboutButton.removeClass('open');
     $caret.attr('class','fa fa-caret-down');
     project.show(this);
@@ -217,7 +217,7 @@ $(document).ready(function() {
   *
   */
   $(window).load(function() {
-
+    console.log("window loaded");
     new AnimOnScroll( document.getElementById( 'grid' ), {
 
     });
