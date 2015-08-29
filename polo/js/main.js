@@ -80,32 +80,28 @@ $(document).ready(function() {
         height     = $el.height(),
         id         = $el.data('id');
 
+      $cssStyles = {
+        'left': position.left + 'px',
+        'top': position.top - $(window).scrollTop() + 'px',
+        'width': width + 'px',
+        'height': height + 'px',
+      };
+      addCss($cssStyles);
 
       $clone = $el.clone();
-      $clone.css('left', position.left);
-      $clone.css('right', position.right);
-      $clone.css('bottom', position.bottom);
-      $clone.css('top', position.top - $(window).scrollTop());
-      $clone.css('width', width);
-      $clone.css('height', height);
       $clone.addClass('position-block');
+      $clone.removeClass('animate');
       $clone.removeClass('grid-item');
       $el.after($clone);
-
-
       var $positionBlock = $('.position-block');
+
 
       $positionBlock.find('.overlay').remove();
       $positionBlock.attr('data-target', id);
-      $positionBlock.animate({
-        width: '60%',
-        height: '97%',
-        left: '0',
-        right: '0',
-        bottom: '0',
-        top: '0',
-        margin: '1%'
-      }, 400);
+
+      window.setTimeout(function() {
+      $positionBlock.addClass("stretch");
+      }, 100)
 
 
       $('.overlay-view').removeClass('hidden');
@@ -120,18 +116,27 @@ $(document).ready(function() {
           targetId       = $positionBlock.data('target'),
           $originalEl    = $('[data-id="'+targetId+'"]'),
           position       = $originalEl.offset(),
-          elWidth        = $originalEl.width(),
-          elHeight       = $originalEl.height();
+          width        = $originalEl.width(),
+          height       = $originalEl.height();
 
-      $positionBlock.animate({
-        width: elWidth,
-        height: elHeight,
-        top: position.top - $(window).scrollTop(),
-        left: position.left,
-        right: position.right,
-        bottom: position.bottom,
-        margin: '0'
-      }, 400);
+      $cssStyles = {
+        'left': position.left + 'px',
+        'top': position.top - $(window).scrollTop() + 'px',
+        'width': width + 'px',
+        'height': height + 'px',
+      };
+      addCss($cssStyles);
+
+      $positionBlock.removeClass('stretch');
+      // $positionBlock.animate({
+      //   width: elWidth,
+      //   height: elHeight,
+      //   top: position.top - $(window).scrollTop(),
+      //   left: position.left,
+      //   right: position.right,
+      //   bottom: position.bottom,
+      //   margin: '0'
+      // }, 400);
 
       setTimeout(function() {
         $positionBlock.remove();
@@ -217,7 +222,7 @@ $(document).ready(function() {
   *
   */
   $(window).load(function() {
-    console.log("window loaded");
+
     new AnimOnScroll( document.getElementById( 'grid' ), {
 
     });
@@ -239,6 +244,26 @@ $(document).ready(function() {
           projectData.get();
       }
   });
+
+
+  function addCss(css) {
+    var cssStyles = '<style> ul .position-block { ';
+    var $styleContainer = $('style');
+
+    $.each(css, function(el, i) {
+      cssStyles += el+": "+i+";";
+    });
+
+    if($styleContainer.length == 1) {
+        console.log("no style");
+        $styleContainer.after(cssStyles + '}');
+    } else {
+        $styleContainer[1].remove();
+        $styleContainer.after(cssStyles + '}');
+
+    }
+
+  };
 
 
 

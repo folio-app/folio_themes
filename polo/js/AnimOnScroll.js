@@ -102,12 +102,13 @@
                     self.items.forEach( function( el, i ) {
                         if( inViewport( el ) ) {
                             self._checkTotalRendered();
-                            classie.add( el, 'shown' );
+                            classie.add( el, 'animate' );
                         }
                     } );
 
                     // animate on scroll the items inside the viewport
                     window.addEventListener( 'scroll', function() {
+                        console.log('scrolled')
                         self._scrollPage();
                     }, false );
 
@@ -120,6 +121,7 @@
             var timer = 0;
             this.items.forEach( function( el, i ) {
                 if( !classie.has( el, 'shown' ) && !classie.has( el, 'animate' ) && inViewport( el, self.options.viewportFactor ) ) {
+                    console.log('in viewport: ', inViewport( el ));
                     setTimeout( function() {
                         // var perspY = scrollY() + getViewportH() / 2;
                         // self.el.style.WebkitPerspectiveOrigin = '50% ' + perspY + 'px';

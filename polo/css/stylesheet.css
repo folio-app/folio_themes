@@ -161,6 +161,8 @@ nav h1 {
     margin-top: 90%;
 }
 
+
+
 .projects {
     position: relative;
     -webkit-transition: transform 0.8s ease;
@@ -303,8 +305,28 @@ nav h1 {
     -moz-box-sizing: boder-box
     -ie-box-sizing: boder-box
     box-sizing: border-box;
+      -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ie-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
+.position-block.stretch {
+    width: 60%;
+    height: 97%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: 1%;
+    opacity: 1;
+}
+
+@media screen and (max-width: 980px) {
+    ul .position-block.stretch {
+        width: 20%;
+    }
+}
 
 /*
 *
@@ -390,7 +412,7 @@ nav h1 {
 *
 */
 
-.projects li {
+.grid-item {
     opacity: 0;
     -webkit-transition: opacity 1s ease;
     -moz-transition: opacity 1s ease;

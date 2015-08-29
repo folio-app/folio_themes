@@ -445,12 +445,12 @@
             }, 500);
         });
 
-        $(document).on('ready', function() {
-            var path = window.location.href;
-            if(path.indexOf("#") >= 0) {
-                getProject();
-            }
-        });
+
+        var path = window.location.href;
+        if(path.indexOf("#") >= 0) {
+            getProject();
+        }
+
 
         addEventListener('hashchange', function () {
             getProject();
@@ -462,6 +462,7 @@
                 $.ajax({
                     url: 'data/data.json',
                     type: 'GET',
+                    dataType: 'json',
                     success: function (data, status) {
                         if (status === "success") {
                             $projectData = data;

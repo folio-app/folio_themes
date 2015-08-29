@@ -138,6 +138,7 @@
                 $.ajax({
                     url: 'data/data.json',
                     type: 'GET',
+                    dataType: 'json',
                     success: function (data, status) {
                         if (status === "success") {
                             $projectData = data;
