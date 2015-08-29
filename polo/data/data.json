@@ -1,6 +1,6 @@
 {
   "template": "Polo",
-  "template-id": "1",
+  "template-id": "11",
   "version": "1.0",
   "my-portfolio": [
     {
@@ -31,7 +31,8 @@
     {
       "name": "details-title",
       "label": "Details Title (Optional)",
-      "descritpion": "Include a title for your about description.",
+      "description": "Include a title for your about description.",
+      "placeholder": "A little about yourself..",
       "type": "text-input",
       "value": "Hi my name is Jane and this is my portfolio.",
       "required": "false"
