@@ -34,6 +34,7 @@ h2 {
 h3 {
     font-size: 28px;
     margin-bottom: 0;
+    font-weight: normal;
 }
 
 li {
@@ -267,7 +268,7 @@ nav h1 {
     -ie-box-sizing: boder-box
     box-sizing: border-box;
     position: absolute;
-    width: 32%;
+    width: 92%;
     height: 100%;
     right: 0;
     top: 0;
@@ -286,6 +287,7 @@ nav h1 {
     -moz-transition: color 0.3s ease;
     -ie-transition: color 0.3s ease;
     transition: color 0.3s ease;
+    z-index: 99;
 }
 
 .close:hover {
@@ -322,11 +324,7 @@ nav h1 {
     opacity: 1;
 }
 
-@media screen and (max-width: 980px) {
-    ul .position-block.stretch {
-        width: 20%;
-    }
-}
+
 
 /*
 *
@@ -400,10 +398,85 @@ nav h1 {
     padding-top: 10px;
 }
 
+.project-image {
+    float: left;
+    width: 66%;
+    height: 100%;
+}
+
+.project-image div {
+    height: 87%;
+    width: 92%;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -ie-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+
+.position-block.stretch {
+    height: 87%;
+    width: 55.9%;
+    margin: 4%;
+}
+
+
+
 .fix-pos {
     overflow: hidden;
 }
 
+.text {
+    width: 34%;
+    float: right;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 700px) {
+    .overlay-view {
+        overflow: auto;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 56%;
+        margin-top: 35px;
+        float: none;
+    }
+
+    .project-image div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .text {
+        float: none;
+        width: 100%;
+    }
+
+    .position-block.stretch {
+        height: 56%;
+        width: 92%;
+        margin: 4%;
+        padding-top: 35px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .close {
+        top: 4px;
+    }
+
+    .project-image {
+        height: 43%;
+    }
+
+    .position-block.stretch {
+        height: 43%;
+        width: 92%;
+        margin: 4%;
+        padding-top: 35px;
+    }
+}
 
 
 /*

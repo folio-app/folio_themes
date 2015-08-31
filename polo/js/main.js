@@ -25,6 +25,7 @@ $(document).ready(function() {
    $('.project-container').imgLiquid();
 
 
+
   /*
   *
   * Set grid element events
@@ -80,6 +81,8 @@ $(document).ready(function() {
         height     = $el.height(),
         id         = $el.data('id');
 
+      var $newImage  = $('.project-image div');
+
       $cssStyles = {
         'left': position.left + 'px',
         'top': position.top - $(window).scrollTop() + 'px',
@@ -97,7 +100,6 @@ $(document).ready(function() {
 
 
       $positionBlock.find('.overlay').remove();
-      $positionBlock.attr('data-target', id);
 
       window.setTimeout(function() {
       $positionBlock.addClass("stretch");
@@ -105,6 +107,10 @@ $(document).ready(function() {
 
 
       $('.overlay-view').removeClass('hidden');
+      $('.project-image div').removeClass('hidden');
+      window.setTimeout(function() {
+        $positionBlock.remove();
+      }, 1000)
       $positionBlock.on('click', function(e) { e.preventDefault();});
 
     },
@@ -112,39 +118,11 @@ $(document).ready(function() {
     hide: function() {
 
       var $overlay       = $('.overlay-view'),
-          $positionBlock = $('.position-block'),
-          targetId       = $positionBlock.data('target'),
-          $originalEl    = $('[data-id="'+targetId+'"]'),
-          position       = $originalEl.offset(),
-          width        = $originalEl.width(),
-          height       = $originalEl.height();
+          $newImage      = $('.project-image div');
 
-      $cssStyles = {
-        'left': position.left + 'px',
-        'top': position.top - $(window).scrollTop() + 'px',
-        'width': width + 'px',
-        'height': height + 'px',
-      };
-      addCss($cssStyles);
-
-      $positionBlock.removeClass('stretch');
-      // $positionBlock.animate({
-      //   width: elWidth,
-      //   height: elHeight,
-      //   top: position.top - $(window).scrollTop(),
-      //   left: position.left,
-      //   right: position.right,
-      //   bottom: position.bottom,
-      //   margin: '0'
-      // }, 400);
-
-      setTimeout(function() {
-        $positionBlock.remove();
-        $('body').removeClass('fix-pos');
-      }, 1000);
-
-
-      $('.overlay-view').addClass('hidden');
+      $('body').removeClass('fix-pos');
+      $overlay.addClass('hidden');
+      $newImage.addClass('hidden');
 
       window.history.pushState('', '', 'index.html');
     }
@@ -191,14 +169,18 @@ $(document).ready(function() {
             $projectTitle = $projectDetails.find('h3');
             $projectDescription = $projectDetails.find('.project-description');
             $projectLink = $('.project-link a');
+            $projectImage = $('.project-image img');
 
 
         $projectTitle.html($project.title);
         $projectDescription.html($project.description);
         $projectLink.attr('href', $project.link);
         $projectLink.html($project.link);
+        $projectImage.attr('src', 'images/'+$project['cover-image']);
+        $('.image-container').imgLiquid();
 
         $projectDetails.addClass('show');
+
 
     }
 
