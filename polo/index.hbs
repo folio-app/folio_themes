@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ my-portfolio.0.value }}</title>
     <meta name="Polo" content="{{}} Portfolio" />
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.min.css" />
     <link href='http://fonts.googleapis.com/css?family=Hind:300|Montserrat:700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
@@ -32,10 +31,17 @@
     <div class="overlay-view hidden">
         <div class="close"><i class="fa fa-times"></i></div>
         <div class="container project-details">
-            <h3></h3>
-            <div class="project-description"><p></p></div>
-            <div class="project-link"><a href=""></a></div>
-        </div>
+              <div class="project-image">
+                <div class="image-container hidden">
+                  <img src="" alt="" title="">
+                </div>
+              </div>
+              <div class="text">
+                <h3></h3>
+                <div class="project-description"><p></p></div>
+                <div class="project-link"><a href=""></a></div>
+              </div>
+          </div>
     </div>
         <div class="container">
 
@@ -55,7 +61,7 @@
             </div>
             <ul class="projects cf" id="grid">
                 {{#each project}}
-                <li class="grid-item" data-id="{{this.id}}">
+                <li class="grid-item">
                     <a href="#/{{ this.id }}">
                         <div class="project-container">
                             <img src="images/{{ this.cover-image }}" alt="{{this.cover-image}}" title="{{this.cover-image}}">
@@ -69,11 +75,7 @@
             </ul>
         </div>
     </main>
-<script src="js/modernizr.custom.js"></script>
-<script src="js/classie.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="js/imgLiquid-min.js"></script>
-<script src="js/AnimOnScroll.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.min.js"></script>
 </body>
 </html>

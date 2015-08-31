@@ -9,7 +9,7 @@
       "description": "What should your portfolio be called? Your name perhaps or do you use an alias?",
       "placeholder": "My Awesome Portfolio",
       "type": "text-input",
-      "value": "Mojo",
+      "value": "",
       "required": "true"
     },
     {
@@ -26,7 +26,7 @@
       "description": "A little about yourself",
       "placeholder": "Hi my name is..",
       "type": "text-editor",
-      "value": "A little about yourself..",
+      "value": "",
       "required": "true"
     },
     {
