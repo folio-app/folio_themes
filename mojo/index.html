@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mojo</title>
     <meta name="portfolio" content="Portfolio website" />
-    <link rel="stylesheet" type="text/css" href="css/stylesheet.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
     <link href='http://fonts.googleapis.com/css?family=Martel:200' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
 <nav role="navigation">
     <div class="nav-container clearfix">
-        <h1>Mojo</h1>
+        <h1><a href="index.html">Mojo</a></h1>
         <h2>Portfolio Website</h2>
 
         <ul class="menu-items">
@@ -43,10 +43,16 @@
         </ul>
     </div>
 </nav>
-<div class="about-section fade-out remove">
-    <p>
-        A little about yourself..
-    </p>
+<div class="about-section fade-out remove hidden">
+    <img src="https://res.cloudinary.com/dwde8d8fq/image/upload/v1441030566/placeholder_rpvngt.jpg">
+    <div class="about-details">
+        <h3>
+            Hi, my name is Jane and this is my portfolio.
+        </h3>
+        <p>
+           I am a digital designer and part time developer. I studied at the Global School of Design in London and have traveled the world working at many interesting companies. My passion for design has allowed me to work on some pretty awesome projects. Please take a look at the projects below and feel free to email me at jane.doe@anon.com.<br><br> I am currently available for jobs.
+        </p>
+    </div>
 </div>
 <div class="project-container">
     <!-- Hidden Project View -->
@@ -421,13 +427,46 @@
         var projectView = document.querySelector('.project-view');
         var aboutSection = document.querySelector('.about-section');
         var gridContainer = document.querySelector('.project-container');
+        var $titleContent = $('h1').text();
+        var $title = $('h1');
         var $projectData = "";
+
+        var medium = false,
+            large  = false,
+            length;
+
+        if($titleContent.indexOf(' ') != -1) {
+            $titleContent = $titleContent.split(' ');
+            length = $titleContent.length;
+        } else {
+            $titleContent.length = 1;
+            $titleContent = [$titleContent];
+            length = 1;
+        }
+
+
+        for(var i = 0; i < length; i++) {
+            if($titleContent[i].length > 7 && $titleContent[i].length <= 9) {
+                medium = true;
+            } else if($titleContent[i].length > 9) {
+                large = true;
+            }
+        }
+
+        if(medium === true) {
+            $title.addClass('title-medium');
+        }
+
+        if(large === true) {
+            $title.addClass('title-large');
+        }
 
 
         aboutUser.addEventListener('click', function(e) {
             e.preventDefault();
             hideProject();
             gridContainer.classList.add("slide-right");
+            aboutSection.classList.remove('hidden');
             setTimeout(function(){
                 aboutSection.classList.remove("fade-out");
                 aboutSection.classList.remove("remove");
@@ -499,10 +538,10 @@
             var height = window.innerHeight;
             $('.project-contents').css('height', height);
             $('.project-contents .project-image').imgLiquid();
-            if($(window).width() > 1025) {
-                $('.project-container').css('position', 'fixed');
-            } else {
+            if($(window).width() < 1025) {
                 $("html, body").animate({ scrollTop: 200 }, "slow");
+            } else {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
             }
             $('.project-view').addClass('project-show');
         }

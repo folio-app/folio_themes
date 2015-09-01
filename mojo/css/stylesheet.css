@@ -51,6 +51,15 @@ h1 {
     line-height: 1.3;
 }
 
+h1.title-medium {
+    font-size: 37px;
+}
+
+h1.title-large {
+    margin-top: 35px;
+    font-size: 24px;
+}
+
 h2, h3 {
     font-family: 'Martel', serif;
     font-weight: lighter;
@@ -60,10 +69,14 @@ h2, h3 {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 24px;
     margin: 0;
+    font-family: Bebas, helvetica, Arial, sans-serif;
 }
 
+.hidden {
+    display: none;
+}
 
 /* Navigation Style */
 
@@ -213,16 +226,29 @@ nav {
     opacity: 1;
     position: relative;
     float: left;
-    margin: 190px 50px 50px;
+    margin: 150px 50px 50px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
-    pointer-events: none;
 }
 
 .about-section p {
     font-family: 'Martel', serif;
     max-width: 625px;
+}
+
+.about-section img,
+.about-details {
+    float: left;
+}
+
+.about-section img {
+    max-width: 20%;
+}
+
+.about-details {
+    padding-left: 40px;
+    max-width: 80%;
 }
 
 /* Project View */
@@ -316,6 +342,7 @@ nav {
 
 .fade-out {
     opacity: 0;
+    pointer-events: none;
 }
 
 .remove {
@@ -350,7 +377,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1250px) {
 
     nav {
         float: none;
@@ -370,6 +397,10 @@ nav {
         margin: 0 auto;
     }
 
+    .project-container .grid {
+        margin-top: 35px;
+    }
+
 
     h1 {
         margin-top: 15px;
@@ -380,7 +411,7 @@ nav {
     .about-section {
         width: 80%;
         margin: 0 auto;
-        padding-top: 50px;
+        top: 80px;
         float: none;
     }
 
@@ -436,6 +467,20 @@ nav {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .about-section img {
+        display: none;
+    }
+
+    .about-details {
+        width: 100%;
+        float: none;
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+
 @media screen and (max-width: 700px) {
     h1 {
         float: none;
@@ -464,7 +509,7 @@ nav {
 .grid {
     max-width: 100%;
     list-style: none;
-    margin: 30px auto;
+    margin: 5px -5px;
     padding: 0;
 }
 

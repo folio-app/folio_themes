@@ -13,12 +13,30 @@
       "required": "true"
     },
     {
-      "name": "profile-picture",
-      "label": "Logo(optional)",
+      "name": "logo",
+      "label": "Logo (Optional)",
       "description": "Do you want to display your logo as the Title instead of the title above?",
       "type": "image-input",
       "value": "",
       "required": "false"
+    },
+    {
+      "name": "profile-picture",
+      "label": "About Page Image (optional)",
+      "description": "Do you want to display your logo as the Title instead of the title above?",
+      "type": "image-input",
+      "value": "",
+      "required": "false"
+    },
+    {
+      "name": "details-title",
+      "label": "Details Title (Optional)",
+      "description": "Include a title for your about description.",
+      "placeholder": "A little about yourself..",
+      "type": "text-input",
+      "value": "",
+      "required": "false"
+
     },
     {
       "name": "details",

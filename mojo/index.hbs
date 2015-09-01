@@ -13,7 +13,7 @@
 <body>
 <nav role="navigation">
     <div class="nav-container clearfix">
-        <h1>{{ my-portfolio.profile-title.value }}</h1>
+        <h1><a href="index.html">{{ my-portfolio.profile-title.value }}</a></h1>
         <h2>Portfolio Website</h2>
 
         <ul class="menu-items">
@@ -36,9 +36,19 @@
         </ul>
     </div>
 </nav>
-<div class="about-section fade-out remove">
-
-    {{{ my-portfolio.details.value }}}
+<div class="about-section fade-out remove hidden">
+     {{#if my-portfolio.profile-picture.value }}
+        <img src="images/{{ my-portfolio.profile-picture.value }}" alt="Profile picture" title="My profile picture">
+    {{else}}
+        <img src="https://res.cloudinary.com/dwde8d8fq/image/upload/v1441030566/placeholder_rpvngt.jpg" alt="comment icon" title="comment icon">
+    {{/if}}
+    <img src="https://res.cloudinary.com/dwde8d8fq/image/upload/v1441030566/placeholder_rpvngt.jpg">
+    <div class="about-details">
+        <h3>
+           {{my-portfolio.details-title.value}}
+        </h3>
+        {{{ my-portfolio.details.value }}}
+    </div>
 
 </div>
 <div class="project-container">
@@ -97,13 +107,46 @@
         var projectView = document.querySelector('.project-view');
         var aboutSection = document.querySelector('.about-section');
         var gridContainer = document.querySelector('.project-container');
+        var $titleContent = $('h1').text();
+        var $title = $('h1');
         var $projectData = "";
+
+        var medium = false,
+            large  = false,
+            length;
+
+        if($titleContent.indexOf(' ') != -1) {
+            $titleContent = $titleContent.split(' ');
+            length = $titleContent.length;
+        } else {
+            $titleContent.length = 1;
+            $titleContent = [$titleContent];
+            length = 1;
+        }
+
+
+        for(var i = 0; i < length; i++) {
+            if($titleContent[i].length > 7 && $titleContent[i].length <= 9) {
+                medium = true;
+            } else if($titleContent[i].length > 9) {
+                large = true;
+            }
+        }
+
+        if(medium === true) {
+            $title.addClass('title-medium');
+        }
+
+        if(large === true) {
+            $title.addClass('title-large');
+        }
 
 
         aboutUser.addEventListener('click', function(e) {
             e.preventDefault();
             hideProject();
             gridContainer.classList.add("slide-right");
+            aboutSection.classList.remove('hidden');
             setTimeout(function(){
                 aboutSection.classList.remove("fade-out");
                 aboutSection.classList.remove("remove");
@@ -121,12 +164,12 @@
             }, 500);
         });
 
-        $(document).on('ready', function() {
-            var path = window.location.href;
-            if(path.indexOf("#") >= 0) {
-                getProject();
-            }
-        });
+
+        var path = window.location.href;
+        if(path.indexOf("#") >= 0) {
+            getProject();
+        }
+
 
         addEventListener('hashchange', function () {
             getProject();
@@ -163,9 +206,10 @@
             var $data = data;
             jQuery.each($data.project, function(i, val) {
                 if(i == id) {
+                    console.log(val['cover-image']);
                     $('.project-image img').attr('src', './images/'+val['cover-image']);
                     $('.project-details h2').html(val.title);
-                    $('.project-paragraph').html(val.description);
+                    $('.project-details p').html(val.description);
                     $('.project-link a').attr('href', val.link);
                     $('.project-link a').html(val.link);
                 }
@@ -174,10 +218,10 @@
             var height = window.innerHeight;
             $('.project-contents').css('height', height);
             $('.project-contents .project-image').imgLiquid();
-            if($(window).width() > 1025) {
-                $('.project-container').css('position', 'fixed');
-            } else {
+            if($(window).width() < 1025) {
                 $("html, body").animate({ scrollTop: 200 }, "slow");
+            } else {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
             }
             $('.project-view').addClass('project-show');
         }
@@ -197,6 +241,7 @@
         });
 
     });
+
 
 </script>
 </body>
