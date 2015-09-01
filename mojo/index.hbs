@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ my-portfolio.0.value }}</title>
-    <meta name="portfolio" content="Portfolio website" />
+    <title>{{ my-portfolio.profile-title.value }}</title>
+    <meta name="{{my-portfolio.profile-title.value}} Online Portfolio" content{{my-portfolio.profile-title.value}} Portfolio" />
     <link rel="stylesheet" type="text/css" href="css/stylesheet.min.css" />
     <link href='http://fonts.googleapis.com/css?family=Martel:200' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -13,7 +13,7 @@
 <body>
 <nav role="navigation">
     <div class="nav-container clearfix">
-        <h1>{{ my-portfolio.0.value }}</h1>
+        <h1>{{ my-portfolio.profile-title.value }}</h1>
         <h2>Portfolio Website</h2>
 
         <ul class="menu-items">
@@ -26,7 +26,7 @@
         </ul>
 
         <ul class="media-icons">
-            {{#each my-portfolio.4.options }}
+            {{#each my-portfolio.select-input-double.options }}
                 {{#each this}}
                     <li>
                         <a href="{{this}}"><i class="fa fa-{{@key}}"></i></a>
@@ -38,7 +38,7 @@
 </nav>
 <div class="about-section fade-out remove">
 
-    {{{ my-portfolio.2.value }}}
+    {{{ my-portfolio.details.value }}}
 
 </div>
 <div class="project-container">
