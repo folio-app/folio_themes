@@ -37,6 +37,15 @@ ul {
     padding-left: 0;
 }
 
+.project-link {
+    border-top: 1px solid #cdcdcd;
+    padding: 10px 0;
+}
+
+.project-link a {
+    color: #333;
+}
+
 a:hover,
 a:active {
 	color: #909090;
@@ -257,13 +266,13 @@ nav {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: #fff;
     z-index: 1;
     top: 0;
     left: 0;
     visibility: hidden;
     opacity: 0;
-    color: white;
+    color: #333333;;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
@@ -279,14 +288,6 @@ nav {
     margin: 0 auto;
 }
 
-.project-link {
-    border-top: 1px solid #fff;
-    padding: 10px 0;
-}
-
-.project-link a {
-    color: #fff;
-}
 
 .project-details,
 .project-image {
@@ -296,7 +297,7 @@ nav {
 .project-image {
     width: 50%;
     height: 100%;
-    border: 1px solid #333;
+    border: 1px solid #cdcdcd;
 }
 
 .project-details {
@@ -317,18 +318,22 @@ nav {
 }
 .close-window {
     display: block;
-    color: white;
+    color: #333;
     font-size: 32px;
     position: absolute;
-    right: 30px;
+    right: 20px;
     top: 20px;
     cursor: pointer;
+}
+
+.close-window:hover {
+    color: #909090;
 }
 
 .project-view-container {
     position: relative;
     top: 50%;
-    height: 80%;
+    height: 90%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -397,8 +402,17 @@ nav {
         margin: 0 auto;
     }
 
+
+    .project-contents {
+        width: 96%;
+    }
+
     .project-container .grid {
         margin-top: 35px;
+    }
+
+    .close-window {
+        top: -10px;
     }
 
 
@@ -536,7 +550,6 @@ nav {
 
 /* Grid slide up effect */
 
-/* Effect 2: Move Up */
 .grid.effect li.animate {
     -webkit-transform: translateY(200px);
     -moz-transform: translateY(200px);

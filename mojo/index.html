@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mojo</title>
     <meta name="portfolio" content="Portfolio website" />
-    <link rel="stylesheet" type="text/css" href="css/stylesheet.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
     <link href='http://fonts.googleapis.com/css?family=Martel:200' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="project-details">
                     <h2></h2>
-                    <P></P>
+                    <div class="project-paragraph"></div>
                     <div class="project-link">
                         <a href=""></a>
                     </div>
@@ -529,7 +529,7 @@
                     console.log(val['cover-image']);
                     $('.project-image img').attr('src', './images/'+val['cover-image']);
                     $('.project-details h2').html(val.title);
-                    $('.project-details p').html(val.description);
+                    $('.project-paragraph').html(val.description);
                     $('.project-link a').attr('href', val.link);
                     $('.project-link a').html(val.link);
                 }
