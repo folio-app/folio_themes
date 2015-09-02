@@ -65,7 +65,7 @@
             </div>
             <ul class="projects cf" id="grid">
                 {{#each project}}
-                <li class="grid-item">
+                <li class="grid-item" data-id="{{ this.id }}">
                     <a href="#/{{ this.id }}">
                         <div class="project-container">
                             <img src="images/{{ this.cover-image }}" alt="{{this.cover-image}}" title="{{this.cover-image}}">

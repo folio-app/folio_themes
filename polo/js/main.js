@@ -1,9 +1,6 @@
 
 $(document).ready(function() {
 
-
-
-
   /*
   *
   * Set variables
@@ -129,7 +126,6 @@ $(document).ready(function() {
   }
 
 
-
   /*
   *
   * Show project functions
@@ -139,11 +135,13 @@ $(document).ready(function() {
     get: function() {
       var id = projectData.getId();
       if($projectJson === "") {
+
         $.ajax({
             url: 'data/data.json',
             type: 'GET',
             dataType: 'json',
             success: function (data, status) {
+              console.log("in");
                 if (status === "success") {
                     $projectJson = data;
                     projectData.insert($projectJson, id);
@@ -163,6 +161,7 @@ $(document).ready(function() {
         return id;
     },
     insert: function(data, id) {
+      console.log("ses");
         var $data    = data,
             $project = $data.project[id],
             $projectDetails = $('.project-details');
@@ -194,6 +193,7 @@ $(document).ready(function() {
   *
   */
   addEventListener('hashchange', function () {
+      console.log("hi");
       projectData.get();
   });
 
@@ -219,8 +219,11 @@ $(document).ready(function() {
     */
       var path = window.location.href;
       if(path.indexOf("#") >= 0) {
-          var id = projectData.getId(),
-              el = $('.grid-item[data-id="' + id + '"]');
+        console.log("test");
+          var id = projectData.getId();
+
+
+          var el = $('.grid-item[data-id="' + id + '"]');
 
           project.show(el);
           projectData.get();
@@ -237,7 +240,6 @@ $(document).ready(function() {
     });
 
     if($styleContainer.length == 1) {
-        console.log("no style");
         $styleContainer.after(cssStyles + '}');
     } else {
         $styleContainer[1].remove();
