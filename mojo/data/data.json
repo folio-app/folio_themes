@@ -10,7 +10,8 @@
       "placeholder": "My Awesome Portfolio",
       "type": "text-input",
       "value": "",
-      "required": "true"
+      "required": "true",
+      "custom-field": "false"
     },
     {
       "name": "logo",
@@ -18,7 +19,8 @@
       "description": "Do you want to display your logo as the Title instead of the title above?",
       "type": "image-input",
       "value": "",
-      "required": "false"
+      "required": "false",
+      "custom-field": "false"
     },
     {
       "name": "profile-picture",
@@ -26,7 +28,8 @@
       "description": "Do you want to display your logo as the Title instead of the title above?",
       "type": "image-input",
       "value": "",
-      "required": "false"
+      "required": "false",
+      "custom-field": "false"
     },
     {
       "name": "details-title",
@@ -35,8 +38,8 @@
       "placeholder": "A little about yourself..",
       "type": "text-input",
       "value": "",
-      "required": "false"
-
+      "required": "false",
+      "custom-field": "false"
     },
     {
       "name": "details",
@@ -45,7 +48,8 @@
       "placeholder": "Hi my name is..",
       "type": "text-editor",
       "value": "",
-      "required": "true"
+      "required": "true",
+      "custom-field": "false"
     },
     {
       "name": "color-select",
@@ -54,7 +58,8 @@
       "colors": {
         "default": "yes",
         "white": "no"
-      }
+      },
+      "custom-field": "false"
     },
     {
       "name": "select-input-double",
@@ -67,7 +72,8 @@
           "twitter": "https://www.twitter.com",
           "behance": "https://www.behance.com"
         }
-      ]
+      ],
+      "custom-field": "false"
     }
   ],
   "project-template": [
@@ -78,7 +84,8 @@
       "placeholder": "My awesome project",
       "type": "text-input",
       "value": "",
-      "required": "true"
+      "required": "true",
+      "custom-field": "false"
     },
     {
       "name": "link",
@@ -87,7 +94,8 @@
       "placeholder": "https://www.awesome.com",
       "type": "url-input",
       "value": "",
-      "required": "true"
+      "required": "true",
+      "custom-field": "false"
     },
     {
       "name": "description",
@@ -96,14 +104,16 @@
       "placeholder": "My project is..",
       "type": "text-editor",
       "value": "",
-      "required": "true"
+      "required": "true",
+      "custom-field": "false"
     },
     {
       "name": "cover-image",
       "label": "cover-image",
       "description": "This will be the focus point for the project.",
       "type": "image-input",
-      "required": "true"
+      "required": "true",
+      "custom-field": "false"
     }
   ],
   "project": {
