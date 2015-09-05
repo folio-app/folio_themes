@@ -193,7 +193,6 @@ $(document).ready(function() {
   *
   */
   addEventListener('hashchange', function () {
-      console.log("hi");
       projectData.get();
   });
 

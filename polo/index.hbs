@@ -14,7 +14,14 @@
     <nav role="nav">
         <div class="container cf">
             <div class="left-nav">About <i class="fa fa-caret-down"></i></i></div>
-            <h1>{{ my-portfolio.profile-title.value }}</h1>
+            {{#if my-portfolio.logo.value}}
+                <a href="index.html" class="header-logo" role="banner">
+                  <h1 class="sr-only" aria-hidden>{{ my-portfolio.profile-title.value }}</h1>
+                  <img src="images/{{ my-portfolio.logo.value }}" alt="logo" title="My logo">
+                </a>
+            {{else}}
+                <h1>{{ my-portfolio.profile-title.value }}</h1>
+            {{/if}}
             <ul class="right-nav">
                 {{#each my-portfolio.select-input-double.options }}
                     {{#each this}}
