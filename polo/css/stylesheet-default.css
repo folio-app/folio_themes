@@ -772,6 +772,7 @@ nav h1 {
 .hidden {
     opacity: 0;
     pointer-events: none;
+    z-index: 0;
 }
 
 .show {
