@@ -693,13 +693,15 @@ nav h1 {
     .projects li {
         width: 50%;
     }
-}
 
-
-@media screen and (max-width: 768px) {
-    .projects li {
-        width: 50%;
+    main .container {
+        width: 98%;
     }
+
+    nav .container {
+        width: 95%;
+    }
+
 
     nav h1 {
         position: absolute;
@@ -714,6 +716,16 @@ nav h1 {
 
     nav {
         padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .grid-item {
+        padding: 5px;
+    }
+
+    nav {
+        padding-top: 40px;
     }
 }
 
@@ -896,6 +908,10 @@ nav h1 {
     .about-text {
         margin-left: 0;
     }
+
+    .about {
+        margin: 50px 0;
+    }
 }
 
 .project-description {
@@ -995,6 +1011,10 @@ nav h1 {
         width: 92%;
         margin: 4%;
         padding-top: 35px;
+    }
+
+    .about {
+        margin: 20px 0;
     }
 }
 
