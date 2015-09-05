@@ -52,15 +52,15 @@
     </div>
         <div class="container">
 
-            <div class="about">
+            <div class="about cf">
                 <div class="container">
+                    {{#if my-portfolio.profile-picture.value }}
                     <div class="about-image">
-                        {{#if my-portfolio.profile-picture.value }}
-                            <img src="images/{{ my-portfolio.profile-picture.value }}" alt="Profile picture" title="My profile picture">
-                        {{else}}
-                            <img src="https://res.cloudinary.com/dwde8d8fq/image/upload/v1441030566/placeholder_rpvngt.jpg" alt="comment icon" title="comment icon">
-                        {{/if}}
+                        <img src="images/{{ my-portfolio.profile-picture.value }}" alt="Profile picture" title="My profile picture">
                     </div>
+                    {{else}}
+                    <div class="about-image-placeholder"></div>
+                    {{/if}}
                     <div class="about-text">
                         <h2>
                          {{ my-portfolio.details-title.value }}
