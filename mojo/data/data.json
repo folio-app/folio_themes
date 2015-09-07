@@ -52,13 +52,11 @@
       "custom-field": "false"
     },
     {
-      "name": "color-select",
+       "name": "color-select",
+      "label": "Which color suites you best?",
       "type": "color-select",
       "required": "true",
-      "colors": {
-        "default": "yes",
-        "white": "no"
-      },
+      "value": "default",
       "custom-field": "false"
     },
     {

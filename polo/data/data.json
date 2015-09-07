@@ -54,12 +54,10 @@
     },
     {
       "name": "color-select",
+      "label": "Which color suites you best?",
       "type": "color-select",
       "required": "true",
-      "colors": {
-        "default": "true",
-        "dark": ""
-      },
+      "value": "default",
       "custom-field": "false"
     },
     {
