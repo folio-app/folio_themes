@@ -16,7 +16,7 @@
         {{#if my-portfolio.logo.value}}
             <a class="user-logo" href="index.html">
                 <h1 class="sr-only" aria-hidden>{{ my-portfolio.profile-title.value }}</h1>
-               <img src="{{my-portfolio.logo.value}}" alt="logo" text="My logo">
+               <img src="images/{{my-portfolio.logo.value}}" alt="logo" text="My logo">
             </a>
         {{else}}
             <h1><a href="index.html">{{ my-portfolio.profile-title.value }}</a></h1>
@@ -36,7 +36,7 @@
             {{#each my-portfolio.select-input-double.options }}
                 {{#each this}}
                     <li>
-                        <a href="{{this}}"><i class="fa fa-{{@key}}"></i></a>
+                        <a href="{{this}}" title="{{@key}} link"><i class="fa fa-{{@key}}"></i></a>
                     </li>
                 {{/each}}
             {{/each}}

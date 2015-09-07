@@ -580,14 +580,14 @@ nav {
 }
 
 
-.media-icons a{
+.media-icons a {
     border-radius: 100px;
     background: #333333;
     color: white;
     width: 40px;
     height: 40px;
+    line-height: 40px;
     display: block;
-    padding-top: 7px;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     transition: all 0.2s;
@@ -596,6 +596,14 @@ nav {
 
 .media-icons a:hover {
     background: #909090;
+}
+
+.media-icons .fa {
+    vertical-align: middle;
+}
+
+.media-icons .fa:before {
+    line-height: 40px;
 }
 
 .media-icons li {
