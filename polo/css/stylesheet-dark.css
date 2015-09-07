@@ -488,12 +488,21 @@ a:hover {
     text-decoration: underline;
 }
 
+p a {
+    color: #579FD2;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+
 h1 a:hover {
     text-decoration: none;
 }
 
 .about-text a {
-    color: #e8e8e8;
+    color: #579FD2;
 }
 
 .about-text a:hover {
