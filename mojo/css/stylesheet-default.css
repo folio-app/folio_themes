@@ -527,6 +527,14 @@ h3 {
     display: none;
 }
 
+.about-image-placeholder {
+    background-image: url('https://res.cloudinary.com/dwde8d8fq/image/upload/v1441456865/placeholder_dark_ekvp2k.png');
+    background-size: 100%;
+    width: 200px;
+    height: 300px;
+    background-repeat: no-repeat;
+}
+
 /* Navigation Style */
 
 nav {
@@ -714,11 +722,13 @@ nav {
 }
 
 .about-section img,
-.about-details {
+.about-details,
+.about-image-placeholder {
     float: left;
 }
 
-.about-section img {
+.about-section img,
+.about-image-placeholder {
     max-width: 20%;
 }
 
@@ -991,7 +1001,8 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
-    .about-section img {
+    .about-section img,
+    .about-image-placeholder {
         display: none;
     }
 
