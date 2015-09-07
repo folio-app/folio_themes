@@ -15,12 +15,12 @@
 <body>
 <nav role="navigation">
     <div class="nav-container clearfix">
-        <h1><a href="index.html">Mojo</a></h1>
+        <h1><a href="index_default.html">Mojo</a></h1>
         <h2>Portfolio Website</h2>
 
         <ul class="menu-items">
             <li>
-                <a href="/about" class="show-projects">Projects</a>
+                <a href="" class="show-projects">Projects</a>
             </li>
             <li>
                 <a href="" class="about-user">About</a>
@@ -421,6 +421,7 @@
         } );
 
 
+
         var aboutUser = document.querySelector('.about-user');
         var projects = document.querySelector('.show-projects');
         var projectItem = document.querySelectorAll('.item a');
@@ -547,7 +548,7 @@
         }
 
         function hideProject() {
-            window.history.pushState('', '', 'index.html');
+            window.history.pushState('', '', 'index_default.html');
             $('.project-container').css('position', 'relative');
             $('.project-view').removeClass('project-show');
         }

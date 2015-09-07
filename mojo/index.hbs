@@ -13,7 +13,14 @@
 <body>
 <nav role="navigation">
     <div class="nav-container clearfix">
-        <h1><a href="index.html">{{ my-portfolio.profile-title.value }}</a></h1>
+        {{#if my-portfolio.logo.value}}
+            <a class="user-logo" href="index.html">
+                <h1 class="sr-only" aria-hidden>{{ my-portfolio.profile-title.value }}</h1>
+               <img src="{{my-portfolio.logo.value}}" alt="logo" text="My logo">
+            </a>
+        {{else}}
+            <h1><a href="index.html">{{ my-portfolio.profile-title.value }}</a></h1>
+        {{/if}}
         <h2>Portfolio Website</h2>
 
         <ul class="menu-items">
