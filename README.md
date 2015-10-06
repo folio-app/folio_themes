@@ -1,15 +1,22 @@
 # Folio Template Library
 
-A collection of html/css/js templates used by Folio - the Github pages portfolio generator.
+This is a collection of portfolio templates used by [Folio](https://myfolioapp.herokuapp.com) - the Github pages portfolio generator. Each template is responsive and should display an about section, project section and social media link section. Each of the portfolios here can be viewed in the [Folio Library](https://myfolioapp.herokuapp.com/template-gallery) and easily used and managed through Folio. If you would like to contribute to this library make sure to follow the guidlines explained below.
 
-Website: http://myfolioapp.herokuapp.com
-
-#Features
+## Features
 * Modern and stylish templates
 * Responsive designs
-* No server required
+* Multiple theme colors available
 
-<br/>
+### Content
+[Structure](#structure)
+
+
+# Structure
+---
+
+![alt text](portfolio_structure.jpg)
+
+
 
 
 
